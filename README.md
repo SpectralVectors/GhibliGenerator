@@ -3,6 +3,12 @@ Blender Python - Procedural Anime Assets
 
 Screenshots:
 
+Rocks in Rain:
+![Rocks in Rain](/RocksInRain.PNG)
+
+Rocks in Water:
+![Rocks in Water](/RocksInWater.PNG)
+
 Rocks, Water and Grass:
 ![Rocks Water Grass](/180104.PNG)
 
