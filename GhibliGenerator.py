@@ -3,10 +3,10 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 1),
+    "version": (0, 2),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
-    "description": "Adds anime style assets",
+    "description": "Procedural Anime Assets",
     "warning": "",
     "doc_url": "",
     "category": "Object",
@@ -80,6 +80,66 @@ def generateGrassPlane():
     links.new(emission.outputs[0], output.inputs[0])
 
     bpy.context.object.data.materials.append(grassmat)
+
+    # Create Custom Properties
+    object = bpy.context.object
+
+    property1 = 'RepeatX'
+    property2 = 'RepeatY'
+    value = 1
+
+    object[property1] = value
+
+    edit_property = object.id_properties_ui(property1)
+    edit_property.update(
+                    #subtype='COLOR',
+                    min=1,
+                    max=100,
+                    description='',
+                    #soft_min=0,
+                    #soft_max=1,
+                    )
+    
+    object[property2] = value
+
+    edit_property = object.id_properties_ui(property2)
+    edit_property.update(
+                    #subtype='COLOR',
+                    min=1,
+                    max=100,
+                    description='',
+                    #soft_min=0,
+                    #soft_max=1,
+                    )
+    # Assign Drivers
+    driven_value = "count"
+
+    driven_object = bpy.context.object.modifiers['Array']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.context.object
+    var.targets[0].data_path = '["RepeatX"]'
+
+    driver.driver.expression = var.name
+
+    driven_value = "count"
+
+    driven_object = bpy.context.object.modifiers['Array.001']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.context.object
+    var.targets[0].data_path = '["RepeatY"]'
+
+    driver.driver.expression = var.name 
+
 
 class OBJECT_OT_generateGrassPlane(bpy.types.Operator):
     """Create a stylized grass plane"""
@@ -623,6 +683,65 @@ def generateWaterPlanes():
 
     surfaceplane.data.materials.append(surfacemat)
 
+    # Create Custom Properties
+    object = surfaceplane
+
+    property1 = 'RepeatX'
+    property2 = 'RepeatY'
+    value = 1
+
+    object[property1] = value
+
+    edit_property = object.id_properties_ui(property1)
+    edit_property.update(
+                    #subtype='COLOR',
+                    min=1,
+                    max=100,
+                    description='',
+                    #soft_min=0,
+                    #soft_max=1,
+                    )
+    
+    object[property2] = value
+
+    edit_property = object.id_properties_ui(property2)
+    edit_property.update(
+                    #subtype='COLOR',
+                    min=1,
+                    max=100,
+                    description='',
+                    #soft_min=0,
+                    #soft_max=1,
+                    )
+    # Assign Drivers
+    driven_value = "count"
+
+    driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.data.objects['SurfacePlane']
+    var.targets[0].data_path = '["RepeatX"]'
+
+    driver.driver.expression = var.name
+
+    driven_value = "count"
+
+    driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array.001']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.data.objects['SurfacePlane']
+    var.targets[0].data_path = '["RepeatY"]'
+
+    driver.driver.expression = var.name 
+
     bottommat = bpy.data.materials.new(name='BottomMaterial')
     bottommat.use_nodes = True
     bottommat.node_tree.nodes.clear()
@@ -711,6 +830,36 @@ def generateWaterPlanes():
     bottomplane = bpy.data.objects['BottomPlane']
 
     bottomplane.parent = surfaceplane
+
+
+    # Assign Drivers
+    driven_value = "count"
+
+    driven_object = bpy.context.object.modifiers['Array']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.data.objects['SurfacePlane']
+    var.targets[0].data_path = '["RepeatX"]'
+
+    driver.driver.expression = var.name
+
+    driven_value = "count"
+
+    driven_object = bpy.context.object.modifiers['Array.001']
+
+    driver = driven_object.driver_add(driven_value)
+
+    var = driver.driver.variables.new()
+    var.name = 'var'
+    var.targets[0].id_type = 'OBJECT'
+    var.targets[0].id = bpy.data.objects['SurfacePlane']
+    var.targets[0].data_path = '["RepeatY"]'
+
+    driver.driver.expression = var.name 
 
 class OBJECT_OT_generateWaterPlanes(bpy.types.Operator):
     """Create a stylized water planes"""
