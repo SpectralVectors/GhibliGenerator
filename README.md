@@ -4,25 +4,25 @@ Blender Python - Procedural Anime Assets
 Screenshots:
 
 Rocks and Water with Shadows:
-![2WayShadow](/2WayShadow.PNG)
+![2WayShadow](/screenshots/2WayShadow.PNG)
 
 Rocks in Water:
-![RocksWaterShadow](/RocksWaterShadow.PNG)
+![RocksWaterShadow](/screenshots/RocksWaterShadow.PNG)
 
 Rocks, Water and Grass:
-![Rocks Water Grass](/180104.PNG)
+![Rocks Water Grass](/screenshots/ThroughGrass.PNG)
 
 Starry Night:
-![StarryNight](/StarryNight.PNG)
+![StarryNight](/screenshots/StarryNight.PNG)
 
 Sunset:
-![Sunset](/Sunset.PNG)
+![Sunset](/screenshots/Sunset.PNG)
 
 Blue Sky:
-![BlueSky](/BlueSky.PNG)
+![BlueSky](/screenshots/BlueSky.PNG)
 
 Action Planes:
-![Action Planes](/1030220038.png)
+![Action Planes](/screenshots/ActionPlanes.png)
 
 ## Acknowledgements and Thanks
 This addon would not have been possible without the techniques, hard work and generosity of many Blender users, including:
