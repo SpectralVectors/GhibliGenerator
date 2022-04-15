@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 3),
+    "version": (0, 4),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -11,8 +11,11 @@ bl_info = {
 }
 
 import bpy
+
 from .Backgrounds import *
-from .Objects.ActionPlanes import *
+
+from .Effects.ActionPlanes import *
+
 from .Objects.GrassPlane import *
 from .Objects.RainPlane import *
 from .Objects.Rock import *

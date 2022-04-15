@@ -1,6 +1,8 @@
 # Grass Generator
 import bpy
 
+from .Drivers.GrassPlaneDrivers import *
+
 def generateGrassPlane():
 
     bpy.ops.mesh.primitive_plane_add(size=2, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
@@ -24,7 +26,7 @@ def generateGrassPlane():
     subsurf.render_levels = 3
     subsurf.subdivision_type = 'SIMPLE'
 
-    grasstex = bpy.data.textures.new(name='Clouds', type = 'CLOUDS')
+    grasstex = bpy.data.textures.new(name='GrassTexture', type = 'CLOUDS')
     grasstex.noise_scale = 1
 
     bpy.ops.object.modifier_add(type='DISPLACE')
@@ -34,7 +36,9 @@ def generateGrassPlane():
     displace.texture = grasstex
 
     bpy.ops.object.particle_system_add()
+    bpy.context.object.particle_systems[0].name = 'GrassParticles'
     particle = bpy.context.object.particle_systems[0].settings
+    particle.name = 'GrassParticleSettings'
     particle.type = 'HAIR'
     particle.count = 5000
     particle.hair_length = 0.2
@@ -54,6 +58,7 @@ def generateGrassPlane():
 
     output = nodes.new(type='ShaderNodeOutputMaterial')
     emission = nodes.new(type='ShaderNodeEmission')
+
     # Shadow Nodes Start
     shadowmixrgb = nodes.new(type='ShaderNodeMixRGB')
     huesaturation = nodes.new(type='ShaderNodeHueSaturation')
@@ -64,6 +69,7 @@ def generateGrassPlane():
     diffuse = nodes.new(type='ShaderNodeBsdfDiffuse')
     normal = nodes.new(type='ShaderNodeNormal')
     #Shadow Nodes End
+
     colorramp = nodes.new(type='ShaderNodeValToRGB')
     colorramp.color_ramp.elements[0].color = (0, 0.1, 0.04, 1)
     colorramp.color_ramp.elements[1].color = (0, 0.5, 0.15, 1)
@@ -83,163 +89,7 @@ def generateGrassPlane():
     
     bpy.context.object.data.materials.append(grassmat)
 
-    # Create Custom Properties
-    object = bpy.context.object
-
-    property1 = 'RepeatX'
-    property2 = 'RepeatY'
-    value = 1
-
-    object[property1] = value
-
-    edit_property = object.id_properties_ui(property1)
-    edit_property.update(
-                    #subtype='COLOR',
-                    min=1,
-                    max=100,
-                    description='',
-                    #soft_min=0,
-                    #soft_max=1,
-                    )
-    
-    object[property2] = value
-
-    edit_property = object.id_properties_ui(property2)
-    edit_property.update(
-                    #subtype='COLOR',
-                    min=1,
-                    max=100,
-                    description='',
-                    #soft_min=0,
-                    #soft_max=1,
-                    )
-
-    # Assign Drivers
-    driven_value = "count"
-
-    driven_object = bpy.context.object.modifiers['Array']
-
-    driver = driven_object.driver_add(driven_value)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.context.object
-    var.targets[0].data_path = '["RepeatX"]'
-
-    driver.driver.expression = var.name
-
-    driven_value = "count"
-
-    driven_object = bpy.context.object.modifiers['Array.001']
-
-    driver = driven_object.driver_add(driven_value)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.context.object
-    var.targets[0].data_path = '["RepeatY"]'
-
-    driver.driver.expression = var.name 
-
-    # Create Properties
-    object = bpy.data.objects['Grass']
-
-    #Color1
-    property = 'Color1'
-
-    object[property] = (0, 0.1, 0.04, 1)
-
-    edit_property = object.id_properties_ui(property)
-    edit_property.update(subtype='COLOR', min=0, max=1)
-
-    # Add Drivers
-    path = 'nodes["ColorRamp"].color_ramp.elements[0].color'
-
-    node_tree = bpy.data.objects['Grass'].material_slots[0].material.node_tree
-
-    driver = node_tree.driver_add(path, 0)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color1"][0]'
-
-    driver.driver.expression = var.name 
-
-    driver = node_tree.driver_add(path, 1)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color1"][1]'
-
-    driver.driver.expression = var.name 
-
-    driver = node_tree.driver_add(path, 2)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color1"][2]'
-
-    driver.driver.expression = var.name 
-
-    # Color2
-    property = 'Color2'
-
-    object[property] = (0, 0.5, 0.15, 1)
-
-    edit_property = object.id_properties_ui(property)
-    edit_property.update(
-                        subtype='COLOR',
-                        min=0,
-                        max=1,
-                        )
-
-    # Add Drivers
-    path = 'nodes["ColorRamp"].color_ramp.elements[1].color'
-
-    node_tree = bpy.data.objects['Grass'].material_slots[0].material.node_tree
-
-    driver = node_tree.driver_add(path, 0)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color2"][0]'
-
-    driver.driver.expression = var.name 
-
-    driver = node_tree.driver_add(path, 1)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color2"][1]'
-
-    driver.driver.expression = var.name 
-
-    driver = node_tree.driver_add(path, 2)
-
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['Grass']
-    var.targets[0].data_path = '["Color2"][2]'
-
-    driver.driver.expression = var.name 
-
-    # Update Driver Dependencies
-    for obj in bpy.context.scene.objects:
-        obj.hide_render = obj.hide_render
-
+# Add a third color to the Grass ColorRamp
 
 class OBJECT_OT_generateGrassPlane(bpy.types.Operator):
     """Create a stylized grass plane"""
@@ -250,5 +100,6 @@ class OBJECT_OT_generateGrassPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateGrassPlane()
+        assignDrivers()
 
         return {'FINISHED'}

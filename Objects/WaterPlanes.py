@@ -176,8 +176,8 @@ def generateWaterPlanes():
     # Create Custom Properties
     object = surfaceplane
 
-    property1 = 'RepeatX'
-    property2 = 'RepeatY'
+    property1 = 'ExtendX'
+    property2 = 'ExtendY'
     value = 1
 
     object[property1] = value
@@ -214,7 +214,7 @@ def generateWaterPlanes():
     var.name = 'var'
     var.targets[0].id_type = 'OBJECT'
     var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["RepeatX"]'
+    var.targets[0].data_path = '["ExtendX"]'
 
     driver.driver.expression = var.name
 
@@ -228,7 +228,7 @@ def generateWaterPlanes():
     var.name = 'var'
     var.targets[0].id_type = 'OBJECT'
     var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["RepeatY"]'
+    var.targets[0].data_path = '["ExtendY"]'
 
     driver.driver.expression = var.name 
 
@@ -352,7 +352,7 @@ def generateWaterPlanes():
     var.name = 'var'
     var.targets[0].id_type = 'OBJECT'
     var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["RepeatX"]'
+    var.targets[0].data_path = '["ExtendX"]'
 
     driver.driver.expression = var.name
 
@@ -366,7 +366,7 @@ def generateWaterPlanes():
     var.name = 'var'
     var.targets[0].id_type = 'OBJECT'
     var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["RepeatY"]'
+    var.targets[0].data_path = '["ExtendY"]'
 
     driver.driver.expression = var.name 
 
