@@ -1,5 +1,7 @@
 # GhibliGenerator
-Blender Python - Procedural Anime Assets
+![GhibliGenerator](/screenshots/GhibliGenerator.PNG)
+
+Procedural Anime Assets for Blender
 
 Screenshots:
 
