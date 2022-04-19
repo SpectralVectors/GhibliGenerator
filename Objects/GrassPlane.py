@@ -57,18 +57,12 @@ def generateGrassPlane():
     nodes = grassmat.node_tree.nodes
 
     output = nodes.new(type='ShaderNodeOutputMaterial')
-    emission = nodes.new(type='ShaderNodeEmission')
 
-    # Shadow Nodes Start
-    shadowmixrgb = nodes.new(type='ShaderNodeMixRGB')
-    huesaturation = nodes.new(type='ShaderNodeHueSaturation')
-    huesaturation.inputs[0].default_value = 0.7
-    huesaturation.inputs[1].default_value = 0.7
-    huesaturation.inputs[2].default_value = 0.1
-    shadertorgb = nodes.new(type='ShaderNodeShaderToRGB')
-    diffuse = nodes.new(type='ShaderNodeBsdfDiffuse')
+    # Translucent & Normal Node
+    translucent = nodes.new(type='ShaderNodeBsdfTranslucent')
     normal = nodes.new(type='ShaderNodeNormal')
-    #Shadow Nodes End
+    normal.outputs[0].default_value = (0, 0, -1)
+    # Ends
 
     colorramp = nodes.new(type='ShaderNodeValToRGB')
     colorramp.color_ramp.elements[0].color = (0, 0.1, 0.04, 1)
@@ -77,14 +71,9 @@ def generateGrassPlane():
 
     links = grassmat.node_tree.links
 
-    links.new(emission.outputs[0], output.inputs[0])
-    links.new(shadowmixrgb.outputs[0], emission.inputs[0])
-    links.new(colorramp.outputs[0], shadowmixrgb.inputs[2])
-    links.new(colorramp.outputs[0], huesaturation.inputs[4])
-    links.new(shadertorgb.outputs[0], shadowmixrgb.inputs[0])
-    links.new(huesaturation.outputs[0], shadowmixrgb.inputs[1])
-    links.new(diffuse.outputs[0], shadertorgb.inputs[0])
-    links.new(normal.outputs[0], diffuse.inputs[2])
+    links.new(translucent.outputs[0], output.inputs[0])
+    links.new(colorramp.outputs[0], translucent.inputs[0])
+    links.new(normal.outputs[0], translucent.inputs[1])
     links.new(noise.outputs[0], colorramp.inputs[0])
     
     bpy.context.object.data.materials.append(grassmat)

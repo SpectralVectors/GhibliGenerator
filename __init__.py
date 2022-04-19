@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 4),
+    "version": (0, 5),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -46,8 +46,10 @@ class GhibliGeneratorPanel(bpy.types.Panel):
         box.label(text="Backgrounds:")
         box.operator(OBJECT_OT_generateBlueSkyBG.bl_idname, text='Blue Sky', icon='LIGHT_SUN')
         box.operator(OBJECT_OT_generateSunsetBG.bl_idname, text='Sunset', icon='ANCHOR_BOTTOM')
+        box.operator(OBJECT_OT_generateOvercastBG.bl_idname, text='Overcast', icon='VOLUME_DATA')
         box.operator(OBJECT_OT_generateTwilightBG.bl_idname, text='Twilight', icon='MOD_TIME')
         box.operator(OBJECT_OT_generateStarryNightBG.bl_idname, text='Starry Night', icon='SOLO_OFF')
+        box.operator(OBJECT_OT_generateDefaultBG.bl_idname, text='Default', icon='BLENDER')
         
 classes = (
             OBJECT_OT_generateGrassPlane,
@@ -58,9 +60,14 @@ classes = (
             OBJECT_OT_generateBlueSkyBG,
             OBJECT_OT_generateSunsetBG,
             OBJECT_OT_generateTwilightBG,
+            OBJECT_OT_generateOvercastBG,
             OBJECT_OT_generateStarryNightBG,
+            OBJECT_OT_generateDefaultBG,
             GhibliGeneratorPanel,
             )
+
+# Register an app handler to enable this addon to clean up node trees
+# bpy.ops.preferences.addon_enable(module="node_arrange")
 
 def register():
     from bpy.utils import register_class

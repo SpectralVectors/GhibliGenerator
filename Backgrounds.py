@@ -1,5 +1,21 @@
 import bpy
 
+# Default Color Background
+def DefaultBG():
+    node_tree = bpy.data.worlds['World'].node_tree
+
+    node_tree.nodes.clear()
+
+    nodes = node_tree.nodes
+
+    output = nodes.new(type='ShaderNodeOutputMaterial')
+    background = nodes.new(type='ShaderNodeBackground')
+    background.inputs[0].default_value = [0.050876, 0.050876, 0.050876, 1.000000]
+
+    links = node_tree.links
+
+    links.new(background.outputs[0], output.inputs[0])
+
 # Blue Sky Background
 def BlueSkyBG():
     node_tree = bpy.data.worlds['World'].node_tree
@@ -61,6 +77,39 @@ def SunsetBG():
     colorramp.color_ramp.elements[3].color = [0.300000, 0.000000, 0.080976, 1.000000]
     colorramp.color_ramp.elements[4].color = [0.192383, 0.000000, 0.200000, 1.000000]
     colorramp.color_ramp.elements[5].color = [0.000000, 0.002117, 0.100000, 1.000000]
+    gradient = nodes.new(type='ShaderNodeTexGradient')
+    mapping = nodes.new(type='ShaderNodeMapping')
+    mapping.inputs[1].default_value = (0.3, 0, 0)
+    mapping.inputs[2].default_value = (0, 1.5708, 0)
+    texcoord = nodes.new(type='ShaderNodeTexCoord')
+
+    links = node_tree.links
+
+    links.new(background.outputs[0], output.inputs[0])
+    links.new(colorramp.outputs[0], background.inputs[0])
+    links.new(gradient.outputs[0], colorramp.inputs[0])
+    links.new(mapping.outputs[0], gradient.inputs[0])
+    links.new(texcoord.outputs[0], mapping.inputs[0])
+
+# Overcast Background
+def OvercastBG():
+    node_tree = bpy.data.worlds['World'].node_tree
+
+    node_tree.nodes.clear()
+
+    nodes = node_tree.nodes
+
+    output = nodes.new(type='ShaderNodeOutputMaterial')
+    background = nodes.new(type='ShaderNodeBackground')
+    colorramp = nodes.new(type='ShaderNodeValToRGB')
+    colorramp.color_ramp.interpolation = 'B_SPLINE'
+    colorramp.color_ramp.elements.new(0.5)
+    colorramp.color_ramp.elements[0].position = 0
+    colorramp.color_ramp.elements[1].position = 0.3
+    colorramp.color_ramp.elements[2].position = 0.7
+    colorramp.color_ramp.elements[0].color = [0.3, 0.3, 0.3, 1.000000]
+    colorramp.color_ramp.elements[1].color = [0.2, 0.2, 0.2, 1.000000]
+    colorramp.color_ramp.elements[2].color = [0.1, 0.1, 0.1, 1.000000]
     gradient = nodes.new(type='ShaderNodeTexGradient')
     mapping = nodes.new(type='ShaderNodeMapping')
     mapping.inputs[1].default_value = (0.3, 0, 0)
@@ -161,6 +210,18 @@ def StarryNightBG():
     links.new(colorramp2.outputs[0], emission.inputs[0])
     links.new(noise.outputs[0], colorramp2.inputs[0])
 
+class OBJECT_OT_generateDefaultBG(bpy.types.Operator):
+    """Create the default Blender background"""
+    bl_idname = "mesh.generate_default"
+    bl_label = "Returns to the Blender default background"
+    bl_options = {'REGISTER', 'UNDO'}
+
+    def execute(self, context):
+
+        DefaultBG()
+
+        return {'FINISHED'}
+
 class OBJECT_OT_generateBlueSkyBG(bpy.types.Operator):
     """Create a blue sky background"""
     bl_idname = "mesh.generate_blue_sky"
@@ -182,6 +243,18 @@ class OBJECT_OT_generateSunsetBG(bpy.types.Operator):
     def execute(self, context):
 
         SunsetBG()
+
+        return {'FINISHED'}
+
+class OBJECT_OT_generateOvercastBG(bpy.types.Operator):
+    """Create an overcast background"""
+    bl_idname = "mesh.generate_overcast"
+    bl_label = "Add an overcast background"
+    bl_options = {'REGISTER', 'UNDO'}
+
+    def execute(self, context):
+
+        OvercastBG()
 
         return {'FINISHED'}
 

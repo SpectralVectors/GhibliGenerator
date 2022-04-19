@@ -60,21 +60,14 @@ def generateWaterPlanes():
 
     mixshader = nodes.new(type='ShaderNodeMixShader')
 
-    emission = nodes.new(type='ShaderNodeEmission')
-    emission.inputs[1].default_value = 5
     transparent = nodes.new(type='ShaderNodeBsdfTransparent')
     transparent.inputs[0].default_value = (0.25, 0.25, 1, 1)
 
-    # Shadow Nodes Start
-    shadowmixrgb = nodes.new(type='ShaderNodeMixRGB')
-    huesaturation = nodes.new(type='ShaderNodeHueSaturation')
-    huesaturation.inputs[0].default_value = 0.7
-    huesaturation.inputs[1].default_value = 0.7
-    huesaturation.inputs[2].default_value = 0
-    shadertorgb = nodes.new(type='ShaderNodeShaderToRGB')
-    diffuse = nodes.new(type='ShaderNodeBsdfDiffuse')
+    # Translucent & Normal Node
+    translucent = nodes.new(type='ShaderNodeBsdfTranslucent')
     normal = nodes.new(type='ShaderNodeNormal')
-    #Shadow Nodes End
+    normal.outputs[0].default_value = (0, 0, -1)
+    # Ends
 
     colorramp1 = nodes.new(type='ShaderNodeValToRGB')
     colorramp1.color_ramp.elements.new(0.5)
@@ -128,21 +121,15 @@ def generateWaterPlanes():
 
     links.new(mixshader.outputs[0], output.inputs[0])
 
-    links.new(emission.outputs[0], mixshader.inputs[1])
-
-    links.new(shadowmixrgb.outputs[0], emission.inputs[0])
+    links.new(translucent.outputs[0], mixshader.inputs[1])
 
     links.new(transparent.outputs[0], mixshader.inputs[2])
 
     links.new(colorramp2.outputs[0], mixshader.inputs[0])
 
-    links.new(colorramp1.outputs[0], huesaturation.inputs[4])
-    links.new(colorramp1.outputs[0], shadowmixrgb.inputs[2])
+    links.new(colorramp1.outputs[0], translucent.inputs[0])
 
-    links.new(shadertorgb.outputs[0], shadowmixrgb.inputs[0])
-    links.new(huesaturation.outputs[0], shadowmixrgb.inputs[1])
-    links.new(diffuse.outputs[0], shadertorgb.inputs[0])
-    links.new(normal.outputs[0], diffuse.inputs[2])
+    links.new(normal.outputs[0], translucent.inputs[1])
 
     links.new(subtract.outputs[0], colorramp2.inputs[0])
 
@@ -240,18 +227,11 @@ def generateWaterPlanes():
 
     output = nodes.new(type='ShaderNodeOutputMaterial')
 
-    emission = nodes.new(type='ShaderNodeEmission')
-
-    # Shadow Nodes Start
-    shadowmixrgb = nodes.new(type='ShaderNodeMixRGB')
-    huesaturation = nodes.new(type='ShaderNodeHueSaturation')
-    huesaturation.inputs[0].default_value = 0.5
-    huesaturation.inputs[1].default_value = 0.7
-    huesaturation.inputs[2].default_value = 0.1
-    shadertorgb = nodes.new(type='ShaderNodeShaderToRGB')
-    diffuse = nodes.new(type='ShaderNodeBsdfDiffuse')
+    # Translucent & Normal Node
+    translucent = nodes.new(type='ShaderNodeBsdfTranslucent')
     normal = nodes.new(type='ShaderNodeNormal')
-    #Shadow Nodes End
+    normal.outputs[0].default_value = (0, 0, -1)
+    # Ends
 
     colorramp = nodes.new(type='ShaderNodeValToRGB')
     colorramp.color_ramp.elements[0].position = 0
@@ -294,17 +274,11 @@ def generateWaterPlanes():
 
     links = bottommat.node_tree.links
 
-    links.new(emission.outputs[0], output.inputs[0])
+    links.new(translucent.outputs[0], output.inputs[0])
 
-    links.new(shadowmixrgb.outputs[0], emission.inputs[0])
+    links.new(colorramp.outputs[0], translucent.inputs[0])
 
-    links.new(colorramp.outputs[0], huesaturation.inputs[4])
-    links.new(colorramp.outputs[0], shadowmixrgb.inputs[2])
-
-    links.new(shadertorgb.outputs[0], shadowmixrgb.inputs[0])
-    links.new(huesaturation.outputs[0], shadowmixrgb.inputs[1])
-    links.new(diffuse.outputs[0], shadertorgb.inputs[0])
-    links.new(normal.outputs[0], diffuse.inputs[2])
+    links.new(normal.outputs[0], translucent.inputs[1])
 
     links.new(subtract.outputs[0], colorramp.inputs[0])
 
