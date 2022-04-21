@@ -1,6 +1,8 @@
 # Action Planes
 import bpy
 
+from .Drivers.ActionPlanesDrivers import *
+
 def generateActionPlanes():
 
     bpy.ops.mesh.primitive_plane_add(size=4, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
@@ -201,5 +203,6 @@ class OBJECT_OT_generateActionPlanes(bpy.types.Operator):
     def execute(self, context):
 
         generateActionPlanes()
+        assignDrivers()
 
         return {'FINISHED'}

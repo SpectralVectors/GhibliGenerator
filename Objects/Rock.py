@@ -1,6 +1,8 @@
 # Rock Generator
 import bpy
 
+from .Drivers.RockDrivers import *
+
 def generateRock():
 
     bpy.ops.mesh.primitive_uv_sphere_add(radius=1, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
@@ -35,9 +37,12 @@ def generateRock():
     mixrgb1 = nodes.new(type='ShaderNodeMixRGB')
     mixrgb1.inputs[2].default_value = (0.1, 0.2, 0.3, 1)
 
-    colorramp1 = nodes.new(type='ShaderNodeValToRGB')
-    colorramp1.color_ramp.elements[0].position = 0.25
-    colorramp1.color_ramp.elements[1].position = 0.8
+    # colorramp1 = nodes.new(type='ShaderNodeValToRGB')
+    # colorramp1.color_ramp.elements[0].position = 0.25
+    # colorramp1.color_ramp.elements[1].position = 0.8
+    brightcontrast = nodes.new(type='ShaderNodeBrightContrast')
+    brightcontrast.inputs[1].default_value = -0.1
+    brightcontrast.inputs[2].default_value = 1.0
     multiply = nodes.new(type='ShaderNodeMixRGB')
     multiply.inputs[0].default_value = 0.9
     multiply.blend_type = 'MULTIPLY'
@@ -92,10 +97,10 @@ def generateRock():
     links.new(mixrgb1.outputs[0], translucent.inputs[0])
     links.new(normal.outputs[0], translucent.inputs[1])
 
-    links.new(colorramp1.outputs[0], mixrgb1.inputs[0])
+    links.new(brightcontrast.outputs[0], mixrgb1.inputs[0])
     links.new(multiply.outputs[0], mixrgb1.inputs[1])
 
-    links.new(mixrgb2.outputs[0], colorramp1.inputs[0])
+    links.new(mixrgb2.outputs[0], brightcontrast.inputs[0])
 
     links.new(colorramp2.outputs[0], multiply.inputs[1])
     links.new(colorramp3.outputs[0], multiply.inputs[2])
@@ -144,5 +149,6 @@ class OBJECT_OT_generateRock(bpy.types.Operator):
     def execute(self, context):
 
         generateRock()
+        assignDrivers()
 
         return {'FINISHED'}

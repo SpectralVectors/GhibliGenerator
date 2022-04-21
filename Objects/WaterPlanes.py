@@ -1,6 +1,8 @@
 # Water Planes
 import bpy
 
+from .Drivers.WaterPlanesDrivers import *
+
 def generateWaterPlanes():
 
     bpy.ops.mesh.primitive_plane_add(size=2, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
@@ -160,64 +162,64 @@ def generateWaterPlanes():
 
     surfaceplane.data.materials.append(surfacemat)
 
-    # Create Custom Properties
-    object = surfaceplane
+    # # Create Custom Properties
+    # object = surfaceplane
 
-    property1 = 'ExtendX'
-    property2 = 'ExtendY'
-    value = 1
+    # property1 = 'ExtendX'
+    # property2 = 'ExtendY'
+    # value = 1
 
-    object[property1] = value
+    # object[property1] = value
 
-    edit_property = object.id_properties_ui(property1)
-    edit_property.update(
-                    #subtype='COLOR',
-                    min=1,
-                    max=100,
-                    description='',
-                    #soft_min=0,
-                    #soft_max=1,
-                    )
+    # edit_property = object.id_properties_ui(property1)
+    # edit_property.update(
+    #                 #subtype='COLOR',
+    #                 min=1,
+    #                 max=100,
+    #                 description='',
+    #                 #soft_min=0,
+    #                 #soft_max=1,
+    #                 )
     
-    object[property2] = value
+    # object[property2] = value
 
-    edit_property = object.id_properties_ui(property2)
-    edit_property.update(
-                    #subtype='COLOR',
-                    min=1,
-                    max=100,
-                    description='',
-                    #soft_min=0,
-                    #soft_max=1,
-                    )
-    # Assign Drivers
-    driven_value = "count"
+    # edit_property = object.id_properties_ui(property2)
+    # edit_property.update(
+    #                 #subtype='COLOR',
+    #                 min=1,
+    #                 max=100,
+    #                 description='',
+    #                 #soft_min=0,
+    #                 #soft_max=1,
+    #                 )
+    # # Assign Drivers
+    # driven_value = "count"
 
-    driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array']
+    # driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array']
 
-    driver = driven_object.driver_add(driven_value)
+    # driver = driven_object.driver_add(driven_value)
 
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["ExtendX"]'
+    # var = driver.driver.variables.new()
+    # var.name = 'var'
+    # var.targets[0].id_type = 'OBJECT'
+    # var.targets[0].id = bpy.data.objects['SurfacePlane']
+    # var.targets[0].data_path = '["ExtendX"]'
 
-    driver.driver.expression = var.name
+    # driver.driver.expression = var.name
 
-    driven_value = "count"
+    # driven_value = "count"
 
-    driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array.001']
+    # driven_object = bpy.data.objects['SurfacePlane'].modifiers['Array.001']
 
-    driver = driven_object.driver_add(driven_value)
+    # driver = driven_object.driver_add(driven_value)
 
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["ExtendY"]'
+    # var = driver.driver.variables.new()
+    # var.name = 'var'
+    # var.targets[0].id_type = 'OBJECT'
+    # var.targets[0].id = bpy.data.objects['SurfacePlane']
+    # var.targets[0].data_path = '["ExtendY"]'
 
-    driver.driver.expression = var.name 
+    # driver.driver.expression = var.name 
 
     bottommat = bpy.data.materials.new(name='BottomMaterial')
     bottommat.use_nodes = True
@@ -315,34 +317,34 @@ def generateWaterPlanes():
     bottomplane.parent = surfaceplane
 
 
-    # Assign Drivers
-    driven_value = "count"
+    # # Assign Drivers
+    # driven_value = "count"
 
-    driven_object = bpy.context.object.modifiers['Array']
+    # driven_object = bpy.context.object.modifiers['Array']
 
-    driver = driven_object.driver_add(driven_value)
+    # driver = driven_object.driver_add(driven_value)
 
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["ExtendX"]'
+    # var = driver.driver.variables.new()
+    # var.name = 'var'
+    # var.targets[0].id_type = 'OBJECT'
+    # var.targets[0].id = bpy.data.objects['SurfacePlane']
+    # var.targets[0].data_path = '["ExtendX"]'
 
-    driver.driver.expression = var.name
+    # driver.driver.expression = var.name
 
-    driven_value = "count"
+    # driven_value = "count"
 
-    driven_object = bpy.context.object.modifiers['Array.001']
+    # driven_object = bpy.context.object.modifiers['Array.001']
 
-    driver = driven_object.driver_add(driven_value)
+    # driver = driven_object.driver_add(driven_value)
 
-    var = driver.driver.variables.new()
-    var.name = 'var'
-    var.targets[0].id_type = 'OBJECT'
-    var.targets[0].id = bpy.data.objects['SurfacePlane']
-    var.targets[0].data_path = '["ExtendY"]'
+    # var = driver.driver.variables.new()
+    # var.name = 'var'
+    # var.targets[0].id_type = 'OBJECT'
+    # var.targets[0].id = bpy.data.objects['SurfacePlane']
+    # var.targets[0].data_path = '["ExtendY"]'
 
-    driver.driver.expression = var.name 
+    # driver.driver.expression = var.name 
 
 
 class OBJECT_OT_generateWaterPlanes(bpy.types.Operator):
@@ -354,5 +356,6 @@ class OBJECT_OT_generateWaterPlanes(bpy.types.Operator):
     def execute(self, context):
 
         generateWaterPlanes()
+        assignDrivers()
 
         return {'FINISHED'}

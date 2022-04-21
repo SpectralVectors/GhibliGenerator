@@ -148,7 +148,7 @@ def assignDrivers():
     d7 = {
         'object': object,
         'property': 'LineOpacity',
-        'value': 1,
+        'value': 1.0,
         'driven_value': 'nodes["Invert"].inputs[0].default_value',
         'driven_object' : object.material_slots[0].material.node_tree,
         'index' : -1,
@@ -157,7 +157,7 @@ def assignDrivers():
         'id_type' : 'OBJECT',
         'subtype': '',
         'min': 0,
-        'max': 100,
+        'max': 10,
     }
 
     drivers.append(d7)
@@ -271,7 +271,7 @@ def assignDrivers():
         'id_type' : 'OBJECT',
         'subtype': '',
         'min': 0,
-        'max': 1,
+        'max': 10,
     }
 
     drivers.append(d13)
