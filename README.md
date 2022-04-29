@@ -1,8 +1,6 @@
 # GhibliGenerator
 ![GhibliGenerator](/screenshots/GhibliGenerator.PNG)
 
-Procedural Anime Assets for Blender
-
 ## What It Is
 
 Using only Blender's internal procedural textures this addon gives you infinitely customizable anime-style assets based on common stylized workflows.
@@ -83,7 +81,7 @@ The assets are divided into categories for easier navigation:
 ## Limitations
 The shader trick I have used to receive scene lights on "emissive" materials comes with a couple of catches, but first, what is the trick?
 
-Instead of using a color ramp or Emission shader we use a Translucent shader with a Normal node that has the Z-axis inverted.
+Instead of using a color ramp or Emission shader before the Material Output we use a Translucent shader with a Normal node that has the Z-axis inverted.
 
 This gives us global lighting now affecting what otherwise appears to be an emissive material, HOWEVER:
 
