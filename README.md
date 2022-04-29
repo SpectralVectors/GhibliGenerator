@@ -3,6 +3,34 @@
 
 Procedural Anime Assets for Blender
 
+## What It Is
+
+Using only Blender's internal procedural textures this addon gives you infinitely customizable anime-style assets based on common stylized workflows. 
+
+In addition to that, each asset comes with a customized driver control panel to give you access to all the most common settings (colors, opacity, texture scale etc) without leaving the 3D Viewport.
+
+## How It Works
+
+The assets are divided into categories for easier navigation:
+
+### Ground Planes
+
+#### Grass
+
+#### Water
+
+#### Sand
+
+#### Ice
+
+#### Stone Path
+
+#### Rock Wall
+
+### Objects
+
+#### Rock
+
 Screenshots:
 
 Rocks and Water with Shadows:
