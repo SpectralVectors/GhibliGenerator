@@ -37,9 +37,27 @@ The assets are divided into categories for easier navigation:
 ### Explosion
 
 
-### Effects
+## Effects
 
-#### Action Planes
+### Action Planes
+
+### Color Flash
+
+### Gradient Flash
+
+### Circular Flash
+
+## Backgrounds
+
+### Blue Sky
+
+### Sunset
+
+### Overcast
+
+### Twilight
+
+### Starry Night
 
 
 ## Acknowledgements and Thanks
