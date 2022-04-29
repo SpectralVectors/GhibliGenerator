@@ -9,50 +9,38 @@ Using only Blender's internal procedural textures this addon gives you infinitel
 
 In addition to that, each asset comes with a customized driver control panel to give you access to all the most common settings (colors, opacity, texture scale etc) without leaving the 3D Viewport.
 
-## How It Works
-
 The assets are divided into categories for easier navigation:
 
-### Ground Planes
+## Ground Planes
 
-#### Grass
+### Grass
 
-#### Water
+### Water
 
-#### Sand
+### Sand
 
-#### Ice
+### Ice
 
-#### Stone Path
+### Stone Path
 
-#### Rock Wall
+### Rock Wall
 
-### Objects
 
-#### Rock
+## Objects
 
-Screenshots:
+### Rock
 
-Rocks and Water with Shadows:
-![2WayShadow](/screenshots/2WayShadow.PNG)
+### Rain Plane
 
-Rocks in Water:
-![RocksWaterShadow](/screenshots/RocksWaterShadow.PNG)
+### Smoke Cloud
 
-Rocks, Water and Grass:
-![Rocks Water Grass](/screenshots/ThroughGrass.PNG)
+### Explosion
 
-Starry Night:
-![StarryNight](/screenshots/StarryNight.PNG)
 
-Sunset:
-![Sunset](/screenshots/Sunset.PNG)
+### Effects
 
-Blue Sky:
-![BlueSky](/screenshots/BlueSky.PNG)
+#### Action Planes
 
-Action Planes:
-![Action Planes](/screenshots/ActionPlanes.png)
 
 ## Acknowledgements and Thanks
 This addon would not have been possible without the techniques, hard work and generosity of many Blender users, including:
