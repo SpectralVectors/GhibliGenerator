@@ -26,7 +26,7 @@ The assets are divided into categories for easier navigation:
 ![IcePlane](/screenshots/IcePlane.png)
 
 ### Stone Path
-![StonePathPlane](/screenshots/StonePathPlane.png)
+![StonePath](/screenshots/StonePath.png)
 
 ### Rock Wall
 ![RockWallPlane](/screenshots/RockWallPlane.png)
@@ -49,24 +49,33 @@ The assets are divided into categories for easier navigation:
 ## Effects
 
 ### Action Planes
+![ActionPlanes](/screenshots/ActionPlanes.png)
 
 ### Color Flash
+![ColorFlash](/screenshots/ColorFlash.png)
 
 ### Gradient Flash
+![GradientFlash](/screenshots/GradientFlash.png)
 
 ### Circular Flash
+![CircularFlash](/screenshots/CircularFlash.png)
 
 ## Backgrounds
 
 ### Blue Sky
+![BlueSky](/screenshots/BlueSky.png)
 
 ### Sunset
+![Sunset](/screenshots/Sunset.png)
 
 ### Overcast
+![Overcast](/screenshots/Overcast.png)
 
 ### Twilight
+![Twilight](/screenshots/Twilight.png)
 
 ### Starry Night
+![StarryNight](/screenshots/StarryNight.png)
 
 
 ## Acknowledgements and Thanks
