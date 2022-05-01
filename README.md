@@ -68,14 +68,22 @@ The assets are divided into categories for easier navigation:
 ### Sand
 ![SandPlane](/screenshots/SandPlane.png)
 
+---
+
 ### Ice
 ![IcePlane](/screenshots/IcePlane.png)
+
+---
 
 ### Stone Path
 ![StonePath](/screenshots/StonePath.png)
 
+---
+
 ### Rock Wall
 ![RockWallPlane](/screenshots/RockWallPlane.png)
+
+---
 
 ## Objects
 
@@ -94,27 +102,40 @@ The assets are divided into categories for easier navigation:
 
 **RockColor** - Color tint for the rock
 
+---
 
 ### Rain Plane
 ![RainPlane](/screenshots/RainPlane.png)
 
+---
+
 ### Smoke Cloud
 ![SmokeCloud](/screenshots/SmokeCloud.png)
+
+---
 
 ### Explosion
 ![Explosion](/screenshots/Explosion.png)
 
+
+---
 
 ## Effects
 
 ### Action Planes
 ![ActionPlanes](/screenshots/ActionPlanes.png)
 
+---
+
 ### Color Flash
 ![ColorFlash](/screenshots/ColorFlash.png)
 
+---
+
 ### Gradient Flash
 ![GradientFlash](/screenshots/GradientFlash.png)
+
+---
 
 ### Circular Flash
 ![CircularFlash](/screenshots/CircularFlash.png)
@@ -124,18 +145,28 @@ The assets are divided into categories for easier navigation:
 ### Blue Sky
 ![BlueSky](/screenshots/BlueSky.png)
 
+---
+
 ### Sunset
 ![Sunset](/screenshots/Sunset.png)
+
+---
 
 ### Overcast
 ![Overcast](/screenshots/Overcast.png)
 
+---
+
 ### Twilight
 ![Twilight](/screenshots/Twilight.png)
+
+---
 
 ### Starry Night
 ![StarryNight](/screenshots/StarryNight.png)
 
+
+---
 
 ## Limitations
 The shader trick I have used to receive scene lights on "emissive" materials comes with a couple of catches, but first, what is the trick?
