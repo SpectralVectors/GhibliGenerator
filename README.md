@@ -15,7 +15,7 @@ The assets are divided into categories for easier navigation:
 
 ### Grass
 ![GrassPlane](/screenshots/GrassPlane.png)
-#### Grass Drivers
+### Grass Drivers
 **Color1** - The first color in the color ramp
 
 **Color1Position** - Default 0, A value between 0-1, the closer to the center, the more intense the color will be.
@@ -36,6 +36,30 @@ The assets are divided into categories for easier navigation:
 
 ### Water
 ![WaterPlanes](/screenshots/WaterPlanes.png)
+### Water Drivers
+**BigRippleScale** - The size of the large distortions
+
+**BigRippleSpeed** - The speed of the large distortions **Driver Value**
+
+**BottomColor1** - The first color of the bottom layer
+
+**BottomColor2** - The second color of the bottom layer, can act like a shadow for the top ripples
+
+**ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
+
+**MotionX/Y** - Moves the wave texture **Driver Value**
+
+**SmallRippleScale** - The size of the small distortions
+
+**SmallRippleSpeed** - The speed of the small distortions **Driver Value**
+
+**SurfaceColor1** - The first color of the surface layer, less visible when transparency is used
+
+**SurfaceColor2** - The second color of the surface layer, less visible when transparency is used
+
+**SurfaceColor3** - The third color of the surface layer, the ripple highlight color, always visible
+
+**SurfaceTransparentColor** - The color of the water, itself
 
 ### Sand
 ![SandPlane](/screenshots/SandPlane.png)
@@ -53,6 +77,19 @@ The assets are divided into categories for easier navigation:
 
 ### Rock
 ![Rock](/screenshots/Rock.png)
+### Rock Drivers
+**Brightness** - Brightness of the rock texture
+
+**Contrast** - Contrast of the rock texture
+
+**DisplaceScale** - The scale of the displacement texture, how _wide_ are the deformations
+
+**DisplaceStrength** - The intensity of the displacement, how _deep_ are the deformations
+
+**PatternMix** - Blend between texture distortion patterns
+
+**RockColor** - Color tint for the rock
+
 
 ### Rain Plane
 ![RainPlane](/screenshots/RainPlane.png)
