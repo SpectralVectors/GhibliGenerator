@@ -18,8 +18,25 @@ The assets are divided into categories for easier navigation:
   - [Ice](#ice)
   - [Stone Path](#stone-path)
   - [Rock Wall](#rock-wall)
+
 - [Objects](#objects)
   - [Rock](#rock)
+  - [Rain Plane](#rain-plane)
+  - [Smoke Cloud](#smoke-cloud)
+  - [Explosion](#explosion)
+
+- [Effects](#effects)
+  - [Action Planes](#action-planes)
+  - [Color Flash](#color-flash)
+  - [Gradient Flash](#gradient-flash)
+  - [Circular Flash](#circular-flash)
+
+- [Backgrounds](#backgrounds)
+  - [Blue Sky](#blue-sky)
+  - [Sunset](#sunset)
+  - [Overcast](#overcast)
+  - [Twilight](#twilight)
+  - [Starry Night](#starry-night)
 
 ## Ground Planes
 
