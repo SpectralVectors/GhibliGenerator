@@ -13,6 +13,13 @@ The assets are divided into categories for easier navigation:
 
 - [Ground Planes](#ground-planes)
   - [Grass](#grass)
+  - [Water](#water)
+  - [Sand](#sand)
+  - [Ice](#ice)
+  - [Stone Path](#stone-path)
+  - [Rock Wall](#rock-wall)
+- [Objects](#objects)
+  - [Rock](#rock)
 
 ## Ground Planes
 
