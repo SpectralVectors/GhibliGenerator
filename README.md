@@ -16,23 +16,23 @@ The assets are divided into categories for easier navigation:
 ### Grass
 ![GrassPlane](/screenshots/GrassPlane.png)
 #### Grass Drivers
-Color1 - The first color in the color ramp
+**Color1** - The first color in the color ramp
 
-Color1Position - Default 0, A value between 0-1, the closer to the center, the more intense the color will be.
+**Color1Position** - Default 0, A value between 0-1, the closer to the center, the more intense the color will be.
 
-Color2 - The second color in the color ramp
+**Color2** - The second color in the color ramp
 
-Color2Position - Default 1, A value between 0-1, the closer to the center, the more intense the color will be.
+**Color2Position** - Default 1, A value between 0-1, the closer to the center, the more intense the color will be.
 
-DisplaceScale - The scale of the displacement texture, how _wide_ do you want the hills
+**DisplaceScale** - The scale of the displacement texture, how _wide_ do you want the hills
 
-DisplaceStrength - The intensity of the displacement, how _tall_ do you want the hills
+**DisplaceStrength** - The intensity of the displacement, how _tall_ do you want the hills
 
-Extend X/Y - Extends the object procedurally to avoid tiling or repetition
+**ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
 
-GrassLength - How long is the grass
+**GrassLength** - How long is the grass
 
-RenderMultiplier - This number will be applied to the total number of grass particles during rendering, set to 1 if you want your grass to appear exactly as it does in the viewport, set up to 1000 to compensate for sparse coverage, or to give a painterly look
+**RenderMultiplier** - This number will be applied to the total number of grass particles during rendering, set to 1 if you want your grass to appear exactly as it does in the viewport, set up to 1000 to compensate for sparse coverage, or to give a painterly look
 
 ### Water
 ![WaterPlanes](/screenshots/WaterPlanes.png)
