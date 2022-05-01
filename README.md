@@ -12,7 +12,7 @@ In addition to that, each asset comes with a customized driver control panel to 
 The assets are divided into categories for easier navigation:
 
 - [Ground Planes](#ground-planes)
-- - [Grass](#grass)
+ - [Grass](#grass)
 
 ## Ground Planes
 
