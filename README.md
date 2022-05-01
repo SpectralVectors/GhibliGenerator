@@ -49,7 +49,7 @@ The assets are divided into categories for easier navigation:
 
 **ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
 
-**MotionX/Y** - Moves the wave texture - **Driver Value**
+**MotionX/Y** - Moves the wave texture, all motion and speed controls affect both water planes in sync - **Driver Value**
 
 **SmallRippleScale** - The size of the small distortions
 
