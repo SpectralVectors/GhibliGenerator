@@ -15,7 +15,7 @@ The assets are divided into categories for easier navigation:
 
 ### Grass
 ![GrassPlane](/screenshots/GrassPlane.png)
-### Grass Drivers
+### Grass Properties
 **Color1** - The first color in the color ramp
 
 **Color1Position** - Default 0, A value between 0-1, the closer to the center, the more intense the color will be.
@@ -38,10 +38,10 @@ The assets are divided into categories for easier navigation:
 
 ### Water
 ![WaterPlanes](/screenshots/WaterPlanes.png)
-### Water Drivers
+### Water Properties
 **BigRippleScale** - The size of the large distortions
 
-**BigRippleSpeed** - The speed of the large distortions **Driver Value**
+**BigRippleSpeed** - The speed of the large distortions - **Driver Value**
 
 **BottomColor1** - The first color of the bottom layer
 
@@ -49,11 +49,11 @@ The assets are divided into categories for easier navigation:
 
 **ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
 
-**MotionX/Y** - Moves the wave texture **Driver Value**
+**MotionX/Y** - Moves the wave texture - **Driver Value**
 
 **SmallRippleScale** - The size of the small distortions
 
-**SmallRippleSpeed** - The speed of the small distortions **Driver Value**
+**SmallRippleSpeed** - The speed of the small distortions - **Driver Value**
 
 **SurfaceColor1** - The first color of the surface layer, less visible when transparency is used
 
@@ -89,7 +89,7 @@ The assets are divided into categories for easier navigation:
 
 ### Rock
 ![Rock](/screenshots/Rock.png)
-### Rock Drivers
+### Rock Properties
 **Brightness** - Brightness of the rock texture
 
 **Contrast** - Contrast of the rock texture
@@ -124,6 +124,37 @@ The assets are divided into categories for easier navigation:
 
 ### Action Planes
 ![ActionPlanes](/screenshots/ActionPlanes.png)
+### Action Planes Properties
+
+**BG_Color1** - The outermost color of the gradient plane
+
+**BG_Color2** - The middle color of the gradient plane
+
+**BG_Color3** - The innermost color of the gradient plane
+
+**BG_EmitStrength** - The light intensity of the gradient plane, use with Bloom
+
+**BG_NoiseLength** - The vertical length of the background noise, can affect the impression of speed
+
+**BG_NoiseWidth** - Not to be confused with background width, this controls the width of the noise texture
+
+**BG_Opacity** - Use to fade the gradient plane in/out - **Keyframe Value**
+
+**BG_Speed** - How fast the noise texture moves - **Driver Value**
+
+**BG_Width** - How wide is the central background color
+
+**LineColor** - The color of the lines
+
+**LineEmitStrength** - The light intensity of the lines, use with Bloom
+
+**LineLength** - How long are the lines, from dots to lines
+
+**LineOpacity** - Use to fade the lines in/out - **Keyframe Value**
+
+**LineSpeed** - How fast the lines move - **Driver Value**
+
+**LineThickness** - How thick are the lines, from thin sticks to thick brush-like strokes
 
 ---
 
