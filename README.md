@@ -34,6 +34,8 @@ The assets are divided into categories for easier navigation:
 
 **RenderMultiplier** - This number will be applied to the total number of grass particles during rendering, set to 1 if you want your grass to appear exactly as it does in the viewport, set up to 1000 to compensate for sparse coverage, or to give a painterly look
 
+---
+
 ### Water
 ![WaterPlanes](/screenshots/WaterPlanes.png)
 ### Water Drivers
@@ -60,6 +62,8 @@ The assets are divided into categories for easier navigation:
 **SurfaceColor3** - The third color of the surface layer, the ripple highlight color, always visible
 
 **SurfaceTransparentColor** - The color of the water, itself
+
+---
 
 ### Sand
 ![SandPlane](/screenshots/SandPlane.png)
