@@ -32,7 +32,7 @@
   - [Starry Night](#starry-night)
 
 - [Limitations](#limitations)
-- [Acknowledgments & Thanks](#acknolwedgements-and-thanks)
+- [Acknowledgments & Thanks](#acknowledgements-and-thanks)
 
 ## What It Is
 
@@ -256,3 +256,6 @@ This addon would not have been possible without the techniques, hard work and ge
 - [Loop](https://www.youtube.com/channel/UChS_1gry7bQeIbdHVSRqMAw)
 
 And thanks, of course, to all the inspired, dedicated and hard working artists and animators from Toei to Ghibli and all across the anime industry!
+
+[Back to the Top](#ghibligenerator)
+
