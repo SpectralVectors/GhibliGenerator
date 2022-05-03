@@ -1,15 +1,8 @@
 # GhibliGenerator
 ![GhibliGenerator](/screenshots/GhibliGenerator.PNG)
 
-## What It Is
-
-Using only Blender's internal procedural textures this addon gives you infinitely customizable anime-style assets based on common stylized workflows.
-
-I have tried to synthesize and simplify different approaches to stylized assets that give quick, easy but versatile results. All of the objects can receive colored light from standard scene lights and cast dynamic shadows. This allows you to quickly tint or shade your entire stylized scene with global lights, but comes with a couple of catches (see: Limitations)
-
-In addition to that, each asset comes with a customized driver control panel to give you access to all the most common settings (colors, opacity, texture scale etc) without leaving the 3D Viewport.
-
-The assets are divided into categories for easier navigation:
+## Table of Contents
+- [What It Is](#what-it-is)
 
 - [Ground Planes](#ground-planes)
   - [Grass](#grass)
@@ -37,6 +30,19 @@ The assets are divided into categories for easier navigation:
   - [Overcast](#overcast)
   - [Twilight](#twilight)
   - [Starry Night](#starry-night)
+
+- [Limitations](#limitations)
+- [Acknowledgments & Thanks](#acknolwedgements-and-thanks)
+
+## What It Is
+
+Using only Blender's internal procedural textures this addon gives you infinitely customizable anime-style assets based on common stylized workflows.
+
+I have tried to synthesize and simplify different approaches to stylized assets that give quick, easy but versatile results. All of the objects can receive colored light from standard scene lights and cast dynamic shadows. This allows you to quickly tint or shade your entire stylized scene with global lights, but comes with a couple of catches (see: Limitations)
+
+In addition to that, each asset comes with a customized driver control panel to give you access to all the most common settings (colors, opacity, texture scale etc) without leaving the 3D Viewport.
+
+The assets are divided into categories for easier navigation:
 
 ## Ground Planes
 
