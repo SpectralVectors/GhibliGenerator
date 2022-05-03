@@ -257,5 +257,5 @@ This addon would not have been possible without the techniques, hard work and ge
 
 And thanks, of course, to all the inspired, dedicated and hard working artists and animators from Toei to Ghibli and all across the anime industry!
 
-[Back to the Top](#ghibligenerator)
+[Top of the Page to You!](#ghibligenerator)
 
