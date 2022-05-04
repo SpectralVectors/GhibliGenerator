@@ -187,7 +187,7 @@ The assets are divided into categories for easier navigation:
 ---
 
 ### Electric Arc Sphere
-![Electric Arc Sphere](/screenshots/ElectricArcSphere.png)
+![Electric Arc Sphere](/screenshots/ElectricArc.png)
 
 [(back to top)](#table-of-contents)
 
