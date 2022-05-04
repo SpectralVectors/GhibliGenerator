@@ -11,7 +11,7 @@ def generateColorFlashPlane():
     colorflash.name = 'ColorFlash'
     bpy.ops.object.shade_smooth()
 
-    colorflashmat = bpy.data.materials.new(name='colorflashmaterial')
+    colorflashmat = bpy.data.materials.new(name='ColorFlashMaterial')
     colorflashmat.use_nodes = True
     colorflashmat.node_tree.nodes.clear()
     colorflashmat.blend_method = 'BLEND'

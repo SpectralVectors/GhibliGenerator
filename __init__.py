@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 7, 5),
+    "version": (0, 8),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -30,6 +30,9 @@ from .Objects.RainPlane import *
 from .Objects.Rock import *
 from .Objects.SmokeCloud import *
 from .Objects.Explosion import *
+from .Objects.EnergyRing import *
+from .Objects.EnergySphere import *
+from .Objects.ElectricArcSphere import *
 
 
 class GhibliGeneratorPanel(bpy.types.Panel):
@@ -44,13 +47,12 @@ class GhibliGeneratorPanel(bpy.types.Panel):
         layout = self.layout
         column = layout.column()
         column.label(text="Procedural Anime Assets")
-        box = layout.box()
         
+        box = layout.box()        
         row = box.row()
         icon = 'TRIA_DOWN' if context.scene.groundplanes_panel_open else 'TRIA_RIGHT'
         row.prop(context.scene, 'groundplanes_panel_open', icon=icon, icon_only=True)
-        row.label(text="Ground Planes")        
-        
+        row.label(text="Ground Planes")                
         if context.scene.groundplanes_panel_open:
             column = box.column()
             column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='HAIR')
@@ -71,6 +73,9 @@ class GhibliGeneratorPanel(bpy.types.Panel):
             column.operator(OBJECT_OT_generateRainPlane.bl_idname, text='Rain Plane', icon='MOD_FLUIDSIM')
             column.operator(OBJECT_OT_generateSmokeCloud.bl_idname, text='Smoke Cloud', icon='MOD_FLUID')
             column.operator(OBJECT_OT_generateExplosion.bl_idname, text='Explosion', icon='SORTBYEXT')
+            column.operator(OBJECT_OT_generateEnergyRing.bl_idname, text='Energy Ring', icon='TRIA_DOWN_BAR')
+            column.operator(OBJECT_OT_generateEnergySphere.bl_idname, text='Energy Sphere', icon='SHADING_RENDERED')
+            column.operator(OBJECT_OT_generateElectricArcSphere.bl_idname, text='Electric Arc Sphere', icon='MOD_SMOOTH')
         
         box = layout.box()
         row = box.row()
@@ -112,6 +117,9 @@ classes = (
             OBJECT_OT_generateSmokeCloud,
             OBJECT_OT_generateExplosion,
             OBJECT_OT_generateRainPlane,
+            OBJECT_OT_generateEnergyRing,
+            OBJECT_OT_generateEnergySphere,
+            OBJECT_OT_generateElectricArcSphere,
 
             # Effects
             OBJECT_OT_generateActionPlanes,
