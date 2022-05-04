@@ -68,6 +68,7 @@ The assets are divided into categories for easier navigation:
 **RenderMultiplier** - This number will be applied to the total number of grass particles during rendering, set to 1 if you want your grass to appear exactly as it does in the viewport, set up to 1000 to compensate for sparse coverage, or to give a painterly look
 
 [Return to Table of Contents](#table-of-contents)
+
 ---
 
 ### Water
