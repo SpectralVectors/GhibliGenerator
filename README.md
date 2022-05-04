@@ -67,7 +67,7 @@ The assets are divided into categories for easier navigation:
 
 **RenderMultiplier** - This number will be applied to the total number of grass particles during rendering, set to 1 if you want your grass to appear exactly as it does in the viewport, set up to 1000 to compensate for sparse coverage, or to give a painterly look
 
-[Return to Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 ---
 
@@ -98,25 +98,35 @@ The assets are divided into categories for easier navigation:
 
 **SurfaceTransparentColor** - The color of the water, itself
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Sand
 ![SandPlane](/screenshots/SandPlane.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
 ### Ice
 ![IcePlane](/screenshots/IcePlane.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Stone Path
 ![StonePath](/screenshots/StonePath.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Rock Wall
 ![RockWallPlane](/screenshots/RockWallPlane.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
@@ -137,21 +147,28 @@ The assets are divided into categories for easier navigation:
 
 **RockColor** - Color tint for the rock
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Rain Plane
 ![RainPlane](/screenshots/RainPlane.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
 ### Smoke Cloud
 ![SmokeCloud](/screenshots/SmokeCloud.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Explosion
 ![Explosion](/screenshots/Explosion.png)
 
+[Table of Contents](#table-of-contents)
 
 ---
 
@@ -191,46 +208,64 @@ The assets are divided into categories for easier navigation:
 
 **LineThickness** - How thick are the lines, from thin sticks to thick brush-like strokes
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Color Flash
 ![ColorFlash](/screenshots/ColorFlash.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
 ### Gradient Flash
 ![GradientFlash](/screenshots/GradientFlash.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Circular Flash
 ![CircularFlash](/screenshots/CircularFlash.png)
+
+[Table of Contents](#table-of-contents)
+
 
 ## Backgrounds
 
 ### Blue Sky
 ![BlueSky](/screenshots/BlueSky.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Sunset
 ![Sunset](/screenshots/Sunset.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
 ### Overcast
 ![Overcast](/screenshots/Overcast.png)
 
+[Table of Contents](#table-of-contents)
+
 ---
 
 ### Twilight
 ![Twilight](/screenshots/Twilight.png)
+
+[Table of Contents](#table-of-contents)
 
 ---
 
 ### Starry Night
 ![StarryNight](/screenshots/StarryNight.png)
 
+[Table of Contents](#table-of-contents)
 
 ---
 
