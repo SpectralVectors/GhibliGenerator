@@ -17,6 +17,9 @@
   - [Rain Plane](#rain-plane)
   - [Smoke Cloud](#smoke-cloud)
   - [Explosion](#explosion)
+  - [Energy Ring](#energy-ring)
+  - [Energy Sphere](#energy-sphere)
+  - [Electric Arc Sphere](#electric-arc-sphere)
 
 - [Effects](#effects)
   - [Action Planes](#action-planes)
