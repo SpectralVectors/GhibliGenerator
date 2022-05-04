@@ -172,6 +172,26 @@ The assets are divided into categories for easier navigation:
 
 ---
 
+### Energy Ring
+![Energy Ring](/screenshots/EnergyRing.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
+### Energy Sphere
+![Energy Sphere](/screenshots/EnergySphere.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
+### Electric Arc Sphere
+![Electric Arc Sphere](/screenshots/ElectricArcSphere.png)
+
+[(back to top)](#table-of-contents)
+
+---
 ## Effects
 
 ### Action Planes
