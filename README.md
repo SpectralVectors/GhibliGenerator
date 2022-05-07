@@ -13,7 +13,7 @@
 [Ice](#ice) | [Explosion](#explosion) | [Circular Flash](#circular-flash) | [Twilight](#twilight)
 [Stone Path](#stone-path) | [Energy Ring](#energy-ring) |  | [Starry Night](#starry-night)
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
- | [Electric Arc Sphere](#electric-arc-sphere) |  | 
+| | [Electric Arc Sphere](#electric-arc-sphere) |  | 
 
 - [Limitations](#limitations)
 - [Acknowledgments & Thanks](#acknowledgements-and-thanks)
