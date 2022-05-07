@@ -4,11 +4,6 @@
 ## Table of Contents
 - [What It Is](#what-it-is)
 - [Assets](#ground-planes)
-
-|---|---|---|---|
-
-|Ground Planes | Objects | Effects | Backgrounds |
-
   - [Ground Planes](#ground-planes)
     - [Grass](#grass)
     - [Water](#water)
