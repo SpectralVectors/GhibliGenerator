@@ -4,7 +4,7 @@
 ## Table of Contents
 - [What It Is](#what-it-is)
 - [Assets](#ground-planes)
-- 
+
 <div align="center">
   
 [Ground Planes](#ground-planes) | [Objects](#objects) | [Effects](#effects) | [Backgrounds](#backgrounds)
@@ -18,6 +18,7 @@
 | | [Electric Arc Sphere](#electric-arc-sphere) |  | 
   
 </div>
+
 - [Limitations](#limitations)
 - [Acknowledgments & Thanks](#acknowledgements-and-thanks)
 
