@@ -20,7 +20,7 @@ __[Assets](#ground-planes)__
   
 __[Limitations](#limitations)__
   
-__/[Acknowledgments & Thanks](#acknowledgements-and-thanks)\__
+__[Acknowledgments & Thanks](#acknowledgements-and-thanks)__
 
 </div>
 
