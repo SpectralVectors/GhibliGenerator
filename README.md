@@ -4,7 +4,18 @@
 ## Table of Contents
 - [What It Is](#what-it-is)
 - [Assets](#ground-planes)
-  - [Ground Planes](#ground-planes)
+
+[Ground Planes](#ground-planes) | [Objects](#objects) | [Effects](#effects) | [Backgrounds](#backgrounds)
+---|---|---|---
+[Grass](#grass) | [Rock](#rock)
+[Water](#water) | [Rain Plane](#rain-plane)
+[Sand](#sand) | [Smoke Cloud](#smoke-cloud)
+[Ice](#ice) | [Explosion](#explosion)
+[Stone Path](#stone-path) | [Energy Ring](#energy-ring)
+[Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere)
+ | [Electric Arc Sphere](#electric-arc-sphere)
+
+- [Ground Planes](#ground-planes)
     - [Grass](#grass)
     - [Water](#water)
     - [Sand](#sand)
