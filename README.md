@@ -18,7 +18,7 @@ __[Assets](#ground-planes)__
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
 | | [Electric Arc Sphere](#electric-arc-sphere) |  | 
   
-### [-Limitations-](#limitations)
+### [- Limitations -](#limitations)
   
 __[Acknowledgments & Thanks](#acknowledgements-and-thanks)__
 
