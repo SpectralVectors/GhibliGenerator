@@ -4,9 +4,9 @@
 ## Table of Contents
 <div align="center">
   
-__[What It Is](#what-it-is)__
+### [- What It Is -](#what-it-is)
   
-__[Assets](#ground-planes)__
+### [- Assets -](#ground-planes)
   
 [Ground Planes](#ground-planes) | [Objects](#objects) | [Effects](#effects) | [Backgrounds](#backgrounds)
 ---|---|---|---
@@ -20,7 +20,7 @@ __[Assets](#ground-planes)__
   
 ### [- Limitations -](#limitations)
   
-__[Acknowledgments & Thanks](#acknowledgements-and-thanks)__
+### [- Acknowledgments & Thanks -](#acknowledgements-and-thanks)
 
 </div>
 
