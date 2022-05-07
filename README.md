@@ -4,7 +4,9 @@
 ## Table of Contents
 - [What It Is](#what-it-is)
 - [Assets](#ground-planes)
+- 
 <div align="center">
+  
 [Ground Planes](#ground-planes) | [Objects](#objects) | [Effects](#effects) | [Backgrounds](#backgrounds)
 ---|---|---|---
 [Grass](#grass) | [Rock](#rock) | [Action Planes](#action-planes) | [Blue Sky](#blue-sky)
@@ -14,6 +16,7 @@
 [Stone Path](#stone-path) | [Energy Ring](#energy-ring) |  | [Starry Night](#starry-night)
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
 | | [Electric Arc Sphere](#electric-arc-sphere) |  | 
+  
 </div>
 - [Limitations](#limitations)
 - [Acknowledgments & Thanks](#acknowledgements-and-thanks)
