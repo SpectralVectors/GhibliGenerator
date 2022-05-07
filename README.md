@@ -4,7 +4,7 @@
 ## Table of Contents
 <div align="center">
   
-__[What It Is](#what-it-is)__
+#### [What It Is](#what-it-is)
   
 __[Assets](#ground-planes)__
   
