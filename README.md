@@ -4,9 +4,9 @@
 ## Table of Contents
 <div align="center">
   
-###[What It Is](#what-it-is)
+### [What It Is](#what-it-is)
   
-###[Assets](#ground-planes)
+### [Assets](#ground-planes)
   
 [Ground Planes](#ground-planes) | [Objects](#objects) | [Effects](#effects) | [Backgrounds](#backgrounds)
 ---|---|---|---
@@ -18,9 +18,9 @@
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
 | | [Electric Arc Sphere](#electric-arc-sphere) |  | 
   
-###[Limitations](#limitations)
+### [Limitations](#limitations)
   
-###[Acknowledgments & Thanks](#acknowledgements-and-thanks)
+### [Acknowledgments & Thanks](#acknowledgements-and-thanks)
 
 </div>
 
