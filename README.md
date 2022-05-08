@@ -17,6 +17,8 @@
 [Stone Path](#stone-path) | [Energy Ring](#energy-ring) |  | [Starry Night](#starry-night)
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
 [Road](#road) | [Electric Arc Sphere](#electric-arc-sphere) |  | 
+|| [Fire Plane](#fire-plane) | |
+|| [HeatRipple](#heat-ripple) | |
   
 ### [- Limitations -](#limitations)
   
@@ -162,6 +164,20 @@ The assets are divided into categories for easier navigation:
 
 ---
 
+### Smoke Ring
+![SmokeRing](/screenshots/SmokeRing.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
+### Smoke Trail
+![SmokeTrail](/screenshots/SmokeTrail.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
 ### Explosion
 ![Explosion](/screenshots/Explosion.png)
 
@@ -188,7 +204,23 @@ The assets are divided into categories for easier navigation:
 
 [(back to top)](#table-of-contents)
 
+
 ---
+
+### Fire Plane
+![Fire Plane](/screenshots/FirePlane.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
+### Heat Ripple
+![Heat Ripple](/screenshots/HeatRipple.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
 ## Effects
 
 ### Action Planes
