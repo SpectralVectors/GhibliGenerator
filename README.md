@@ -16,7 +16,7 @@
 [Ice](#ice) | [Explosion](#explosion) | [Circular Flash](#circular-flash) | [Twilight](#twilight)
 [Stone Path](#stone-path) | [Energy Ring](#energy-ring) |  | [Starry Night](#starry-night)
 [Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
-| | [Electric Arc Sphere](#electric-arc-sphere) |  | 
+[Road](#road) | [Electric Arc Sphere](#electric-arc-sphere) |  | 
   
 ### [- Limitations -](#limitations)
   
@@ -115,6 +115,13 @@ The assets are divided into categories for easier navigation:
 
 ### Rock Wall
 ![RockWallPlane](/screenshots/RockWallPlane.png)
+
+[(back to top)](#table-of-contents)
+
+---
+
+### Road
+![RoadPlane](/screenshots/RoadPlane.png)
 
 [(back to top)](#table-of-contents)
 
