@@ -13,10 +13,12 @@
 [Grass](#grass) | [Rock](#rock) | [Action Planes](#action-planes) | [Blue Sky](#blue-sky)
 [Water](#water) | [Rain Plane](#rain-plane) | [Color Flash](#color-flash) | [Sunset](#sunset)
 [Sand](#sand) | [Smoke Cloud](#smoke-cloud) | [Gradient Flash](#gradient-flash) | [Overcast](#overcast)
-[Ice](#ice) | [Explosion](#explosion) | [Circular Flash](#circular-flash) | [Twilight](#twilight)
-[Stone Path](#stone-path) | [Energy Ring](#energy-ring) |  | [Starry Night](#starry-night)
-[Rock Wall](#rock-wall) | [Energy Sphere](#energy-sphere) |  | 
-[Road](#road) | [Electric Arc Sphere](#electric-arc-sphere) |  | 
+[Ice](#ice) | [Smoke Ring](#smoke-ring) | [Circular Flash](#circular-flash) | [Twilight](#twilight)
+[Stone Path](#stone-path) | [Smoke Trail](#smoke-trail) |  | [Starry Night](#starry-night)
+[Rock Wall](#rock-wall) | [Explosion](#explosion) |  | 
+[Road](#road) | [Energy Ring](#energy-ring) |  | 
+|| [Energy Sphere](#energy-sphere) | |
+||  [Electric Arc Sphere](#electric-arc-sphere)  | |
 || [Fire Plane](#fire-plane) | |
 || [HeatRipple](#heat-ripple) | |
   
