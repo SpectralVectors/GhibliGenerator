@@ -35,7 +35,6 @@ def generateElectricArcSphere():
     energyspheremat.use_nodes = True
     energyspheremat.blend_method = 'BLEND'
     energyspheremat.shadow_method = 'NONE'
-    #energyspheremat.show_transparent_back = False
     energyspheremat.node_tree.nodes.clear()
 
     nodes = energyspheremat.node_tree.nodes
@@ -85,6 +84,9 @@ def generateElectricArcSphere():
     links.new(wavemapping.outputs[0], wave.inputs[0])
     links.new(texcoord.outputs[3], wavemapping.inputs[0])
 
+    # bpy.ops.node.select_all(action='TOGGLE')
+    # bpy.ops.node.button()
+    
     bpy.context.object.data.materials.append(energyspheremat)
 
 

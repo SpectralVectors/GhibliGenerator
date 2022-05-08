@@ -19,17 +19,24 @@ def generateSmokeCloud():
     subsurf.render_levels = 2
 
     bpy.ops.object.modifier_add(type='DISPLACE')
-    displace = smoke.modifiers["Displace"]
-    displace.texture_coords = 'GLOBAL'
-    displace.texture = smoketex
+    displace0 = smoke.modifiers["Displace"]
+    displace0.texture_coords = 'GLOBAL'
+    displace0.texture = smoketex
 
     bpy.ops.object.modifier_add(type='SUBSURF')
     subsurf1 = smoke.modifiers["Subdivision.001"]
     subsurf1.levels = 2
     subsurf1.render_levels = 2
 
+    bpy.ops.object.modifier_add(type='DISPLACE')
+    displace1 = smoke.modifiers["Displace.001"]
+    displace1.mid_level = 0.9
+
     smokemat = bpy.data.materials.new(name='smokeMaterial')
     smokemat.use_nodes = True
+    smokemat.blend_method = 'BLEND'
+    smokemat.shadow_method = 'NONE'
+    smokemat.show_transparent_back = False
     smokemat.node_tree.nodes.clear()
 
     nodes = smokemat.node_tree.nodes
@@ -42,10 +49,13 @@ def generateSmokeCloud():
 
     colorramp0 = nodes.new(type='ShaderNodeValToRGB')
     colorramp0.color_ramp.interpolation = 'CONSTANT'
-    colorramp0.color_ramp.elements[0].color = [0.104094, 0.104094, 0.104094, 1.000000]
-    colorramp0.color_ramp.elements[1].color = [0.369217, 0.369217, 0.369217, 1.000000]
-    colorramp0.color_ramp.elements[1].position = 0.164
-
+    colorramp0.color_ramp.elements.new(0.5)
+    colorramp0.color_ramp.elements[0].color = [0.056122, 0.056122, 0.056122, 1.000000]
+    colorramp0.color_ramp.elements[1].color = [0.104094, 0.104094, 0.104094, 1.000000]
+    colorramp0.color_ramp.elements[2].color = [0.369217, 0.369217, 0.369217, 1.000000]
+    colorramp0.color_ramp.elements[1].position = 0.01
+    colorramp0.color_ramp.elements[2].position = 0.1
+    
     shadertorgb = nodes.new(type='ShaderNodeShaderToRGB')
     
     diffuse = nodes.new(type='ShaderNodeBsdfDiffuse')
@@ -73,7 +83,8 @@ def generateSmokeCloud():
 
     links.new(colorramp1.outputs[0], mixshader.inputs[0])
     links.new(voronoi.outputs[0], colorramp1.inputs[0])
-    links.new(fresnel.outputs[0], voronoi.inputs[1])
+    links.new(fresnel.outputs[0], diffuse.inputs[0])
+    links.new(fresnel.outputs[0], voronoi.inputs[0])
 
     bpy.context.object.data.materials.append(smokemat)
 

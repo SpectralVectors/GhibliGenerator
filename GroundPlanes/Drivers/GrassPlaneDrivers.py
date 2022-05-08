@@ -170,23 +170,6 @@ def assignDrivers():
 
     drivers.append(d8)
 
-    #d6 = {
-    #    'object': bpy.data.objects['Grass'],
-    #    'property': 'NumberOfBlades',
-    #    'value': 5000,
-    #    'driven_value': 'count',
-    #    'driven_object' : bpy.data.particles["ParticleSettings"],
-    #    'index' : -1,
-    #    'variable_name' : 'var',
-    #    'data_path' : '["NumberOfBlades"]',
-    #    'id_type' : 'OBJECT',
-    #    'subtype': '',
-    #    'min': 0,
-    #    'max': 1000000,
-    #}
-
-    #drivers.append(d6)
-
     # Grass Length
     d9 = {
         'object': object,

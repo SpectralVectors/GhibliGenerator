@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 8),
+    "version": (0, 8, 2),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -11,6 +11,8 @@ bl_info = {
 }
 
 import bpy
+
+from bpy.app.handlers import persistent
 
 from .Backgrounds import *
 
@@ -25,6 +27,7 @@ from .GroundPlanes.SandPlane import *
 from .GroundPlanes.IcePlane import *
 from .GroundPlanes.StonePathPlane import *
 from .GroundPlanes.RockWallPlane import *
+from .GroundPlanes.RoadPlane import *
 
 from .Objects.RainPlane import *
 from .Objects.Rock import *
@@ -34,6 +37,10 @@ from .Objects.EnergyRing import *
 from .Objects.EnergySphere import *
 from .Objects.ElectricArcSphere import *
 
+@persistent
+def addon_enabler(dummy):   
+    bpy.ops.preferences.addon_enable(module="add_curve_sapling")
+    bpy.ops.preferences.addon_enable(module="node_arrange")    
 
 class GhibliGeneratorPanel(bpy.types.Panel):
     bl_label = "Ghibli Generator"
@@ -61,6 +68,7 @@ class GhibliGeneratorPanel(bpy.types.Panel):
             column.operator(OBJECT_OT_generateIcePlane.bl_idname, text='Ice', icon='FREEZE')
             column.operator(OBJECT_OT_generateStonePathPlane.bl_idname, text='Stone Path', icon='POINTCLOUD_DATA')
             column.operator(OBJECT_OT_generateRockWallPlane.bl_idname, text='Rock Wall', icon='LINCURVE')
+            column.operator(OBJECT_OT_generateRoadRlane.bl_idname, text='Road', icon='COLLAPSEMENU')
         
         box = layout.box()
         row = box.row()
@@ -111,6 +119,7 @@ classes = (
             OBJECT_OT_generateIcePlane,
             OBJECT_OT_generateStonePathPlane,
             OBJECT_OT_generateRockWallPlane,
+            OBJECT_OT_generateRoadRlane,
 
             # Objects
             OBJECT_OT_generateRock,
@@ -139,8 +148,6 @@ classes = (
             GhibliGeneratorPanel,
             )
 
-# Register an app handler to enable this addon to clean up node trees
-# bpy.ops.preferences.addon_enable(module="node_arrange")
 
 def register():
     
@@ -159,6 +166,8 @@ def register():
     bpy.types.Scene.backgrounds_panel_open = bpy.props.BoolProperty(
         default=False
     )
+
+    bpy.app.handlers.load_post.append(addon_enabler)
     
     from bpy.utils import register_class
     for cls in classes:
@@ -169,6 +178,8 @@ def unregister():
     from bpy.utils import unregister_class
     for cls in reversed(classes):
         unregister_class(cls)
+
+    bpy.app.handlers.load_post.remove(addon_enabler)
 
 
 if __name__ == "__package__":

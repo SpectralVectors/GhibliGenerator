@@ -89,7 +89,7 @@ def generateExplosion():
 
     links.new(colorramp1.outputs[0], mixshader.inputs[0])
     links.new(voronoi.outputs[0], colorramp1.inputs[0])
-    links.new(fresnel.outputs[0], voronoi.inputs[1])
+    links.new(fresnel.outputs[0], voronoi.inputs[0])
 
     bpy.context.object.data.materials.append(explosionmat)
 
