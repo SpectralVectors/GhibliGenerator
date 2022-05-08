@@ -1,17 +1,23 @@
-# Smoke Cloud Generator
+# Smoke Trail Generator
 import bpy
 
 #from .Drivers.smokeDrivers import *
 
-def generateSmokeCloud():
+def generateSmokeTrail():
 
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=1, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
+    bpy.ops.mesh.primitive_cylinder_add(radius=1, depth=2, end_fill_type='NOTHING', enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
     smoke = bpy.context.object
-    smoke.name = 'SmokeCloud'
+    smoke.name = 'SmokeTrail'
     bpy.ops.object.shade_smooth()
 
     smoketex = bpy.data.textures.new(name='Clouds', type = 'CLOUDS')
     smoketex.noise_scale = 1.0
+
+    bpy.ops.object.modifier_add(type='ARRAY')
+    array = smoke.modifiers["Array"]
+    array.relative_offset_displace[0] = 0
+    array.relative_offset_displace[2] = 1
+    array.use_merge_vertices = True
 
     bpy.ops.object.modifier_add(type='SUBSURF')
     subsurf = smoke.modifiers["Subdivision"]
@@ -89,15 +95,15 @@ def generateSmokeCloud():
     bpy.context.object.data.materials.append(smokemat)
 
 
-class OBJECT_OT_generateSmokeCloud(bpy.types.Operator):
-    """Create a stylized smoke cloud"""
-    bl_idname = "mesh.generate_smoke_cloud"
-    bl_label = "Add Stylized Smoke Cloud"
+class OBJECT_OT_generateSmokeTrail(bpy.types.Operator):
+    """Create a stylized smoke trail"""
+    bl_idname = "mesh.generate_smoke_trail"
+    bl_label = "Add Stylized Smoke Trail"
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
 
-        generateSmokeCloud()
+        generateSmokeTrail()
         #assignDrivers()
 
         return {'FINISHED'}

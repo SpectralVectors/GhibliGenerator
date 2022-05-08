@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 8, 2),
+    "version": (0, 8, 3),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -30,12 +30,16 @@ from .GroundPlanes.RockWallPlane import *
 from .GroundPlanes.RoadPlane import *
 
 from .Objects.RainPlane import *
+from .Objects.FirePlane import *
 from .Objects.Rock import *
 from .Objects.SmokeCloud import *
+from .Objects.SmokeRing import *
+from .Objects.SmokeTrail import *
 from .Objects.Explosion import *
 from .Objects.EnergyRing import *
 from .Objects.EnergySphere import *
 from .Objects.ElectricArcSphere import *
+from .Objects.HeatRipplePlane import *
 
 @persistent
 def addon_enabler(dummy):   
@@ -80,16 +84,20 @@ class GhibliGeneratorPanel(bpy.types.Panel):
             column.operator(OBJECT_OT_generateRock.bl_idname, text='Rock', icon='MESH_CAPSULE')
             column.operator(OBJECT_OT_generateRainPlane.bl_idname, text='Rain Plane', icon='MOD_FLUIDSIM')
             column.operator(OBJECT_OT_generateSmokeCloud.bl_idname, text='Smoke Cloud', icon='MOD_FLUID')
+            column.operator(OBJECT_OT_generateSmokeRing.bl_idname, text='Smoke Ring', icon='RADIOBUT_OFF')
+            column.operator(OBJECT_OT_generateSmokeTrail.bl_idname, text='Smoke Trail', icon='FORCE_FLUIDFLOW')
             column.operator(OBJECT_OT_generateExplosion.bl_idname, text='Explosion', icon='SORTBYEXT')
             column.operator(OBJECT_OT_generateEnergyRing.bl_idname, text='Energy Ring', icon='TRIA_DOWN_BAR')
             column.operator(OBJECT_OT_generateEnergySphere.bl_idname, text='Energy Sphere', icon='SHADING_RENDERED')
             column.operator(OBJECT_OT_generateElectricArcSphere.bl_idname, text='Electric Arc Sphere', icon='MOD_SMOOTH')
+            column.operator(OBJECT_OT_generateFirePlane.bl_idname, text='Fire Plane', icon='SEQ_HISTOGRAM')
+            column.operator(OBJECT_OT_generateHeatRipplePlane.bl_idname, text='Heat Ripple', icon='FORCE_TURBULENCE')
         
         box = layout.box()
         row = box.row()
         icon = 'TRIA_DOWN' if context.scene.effects_panel_open else 'TRIA_RIGHT'
         row.prop(context.scene, 'effects_panel_open', icon=icon, icon_only=True) 
-        row.label(text="Effects")
+        row.label(text="BG Effects")
         if context.scene.effects_panel_open:
             column = box.column()
             column.operator(OBJECT_OT_generateActionPlanes.bl_idname, text='Action Planes', icon='MOD_OPACITY')
@@ -101,7 +109,7 @@ class GhibliGeneratorPanel(bpy.types.Panel):
         row = box.row()
         icon = 'TRIA_DOWN' if context.scene.backgrounds_panel_open else 'TRIA_RIGHT'
         row.prop(context.scene, 'backgrounds_panel_open', icon=icon, icon_only=True) 
-        row.label(text="Backgrounds")
+        row.label(text="World Backgrounds")
         if context.scene.backgrounds_panel_open:
             column = box.column()
             column.operator(OBJECT_OT_generateBlueSkyBG.bl_idname, text='Blue Sky', icon='LIGHT_SUN')
@@ -124,11 +132,15 @@ classes = (
             # Objects
             OBJECT_OT_generateRock,
             OBJECT_OT_generateSmokeCloud,
+            OBJECT_OT_generateSmokeRing,
+            OBJECT_OT_generateSmokeTrail,
             OBJECT_OT_generateExplosion,
             OBJECT_OT_generateRainPlane,
             OBJECT_OT_generateEnergyRing,
             OBJECT_OT_generateEnergySphere,
             OBJECT_OT_generateElectricArcSphere,
+            OBJECT_OT_generateFirePlane,
+            OBJECT_OT_generateHeatRipplePlane,
 
             # Effects
             OBJECT_OT_generateActionPlanes,

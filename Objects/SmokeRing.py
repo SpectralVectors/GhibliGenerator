@@ -1,13 +1,13 @@
-# Smoke Cloud Generator
+# Smoke Ring Generator
 import bpy
 
 #from .Drivers.smokeDrivers import *
 
-def generateSmokeCloud():
+def generateSmokeRing():
 
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=1, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
+    bpy.ops.mesh.primitive_torus_add(align='WORLD', location=(0, 0, 0), rotation=(0, 0, 0), major_radius=1, minor_radius=0.25, abso_major_rad=1.25, abso_minor_rad=0.75)
     smoke = bpy.context.object
-    smoke.name = 'SmokeCloud'
+    smoke.name = 'SmokeRing'
     bpy.ops.object.shade_smooth()
 
     smoketex = bpy.data.textures.new(name='Clouds', type = 'CLOUDS')
@@ -89,15 +89,15 @@ def generateSmokeCloud():
     bpy.context.object.data.materials.append(smokemat)
 
 
-class OBJECT_OT_generateSmokeCloud(bpy.types.Operator):
-    """Create a stylized smoke cloud"""
-    bl_idname = "mesh.generate_smoke_cloud"
-    bl_label = "Add Stylized Smoke Cloud"
+class OBJECT_OT_generateSmokeRing(bpy.types.Operator):
+    """Create a stylized smoke ring"""
+    bl_idname = "mesh.generate_smoke_ring"
+    bl_label = "Add Stylized Smoke Ring"
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
 
-        generateSmokeCloud()
+        generateSmokeRing()
         #assignDrivers()
 
         return {'FINISHED'}
