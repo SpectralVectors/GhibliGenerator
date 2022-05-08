@@ -60,8 +60,8 @@ def generateRoadPlane():
     colorramp0.color_ramp.elements.new(0.25)
     colorramp0.color_ramp.elements.new(0.125)
     colorramp0.color_ramp.elements[0].position = 0.0
-    colorramp0.color_ramp.elements[1].position = 0.08
-    colorramp0.color_ramp.elements[2].position = 0.1
+    colorramp0.color_ramp.elements[1].position = 0.05
+    colorramp0.color_ramp.elements[2].position = 0.08
     colorramp0.color_ramp.elements[3].position = 0.92
     colorramp0.color_ramp.elements[4].position = 0.95
     colorramp0.color_ramp.elements[0].color = [0.063267, 0.063267, 0.063267, 1.000000]
