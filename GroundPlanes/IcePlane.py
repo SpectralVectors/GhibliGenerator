@@ -1,7 +1,7 @@
 # Ice Plane Generator
 import bpy
 
-#from .Drivers.iceplaneDrivers import *
+from .Drivers.IcePlaneDrivers import *
 
 def generateIcePlane():
 
@@ -127,6 +127,6 @@ class OBJECT_OT_generateIcePlane(bpy.types.Operator):
     def execute(self, context):
 
         generateIcePlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

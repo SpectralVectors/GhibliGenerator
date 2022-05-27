@@ -1,7 +1,7 @@
 # Stone Path Plane Generator
 import bpy
 
-#from .Drivers.stonepathDrivers import *
+from .Drivers.StonePathPlaneDrivers import *
 
 def generateStonePathPlane():
 
@@ -113,6 +113,6 @@ class OBJECT_OT_generateStonePathPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateStonePathPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

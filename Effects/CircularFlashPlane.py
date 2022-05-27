@@ -1,7 +1,7 @@
 # Circular Flash Plane
 import bpy
 
-#from .Drivers.ActionPlanesDrivers import *
+from .Drivers.CircularFlashDrivers import *
 
 def generateCircularFlashPlane():
 
@@ -68,6 +68,6 @@ class OBJECT_OT_generateCircularFlashPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateCircularFlashPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

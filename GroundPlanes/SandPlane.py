@@ -1,7 +1,7 @@
 # Sand Plane Generator
 import bpy
 
-#from .Drivers.sandplaneDrivers import *
+from .Drivers.SandPlaneDrivers import *
 
 def generateSandPlane():
 
@@ -106,6 +106,6 @@ class OBJECT_OT_generateSandPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateSandPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

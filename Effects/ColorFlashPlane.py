@@ -1,7 +1,7 @@
 # Color Flash Plane
 import bpy
 
-#from .Drivers.ActionPlanesDrivers import *
+from .Drivers.ColorFlashDrivers import *
 
 def generateColorFlashPlane():
 
@@ -48,6 +48,6 @@ class OBJECT_OT_generateColorFlashPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateColorFlashPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

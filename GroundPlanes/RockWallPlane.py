@@ -1,7 +1,7 @@
 # Rock Wall Plane Generator
 import bpy
 
-#from .Drivers.rockwallDrivers import *
+from .Drivers.RockWallPlaneDrivers import *
 
 def generateRockWallPlane():
 
@@ -122,6 +122,6 @@ class OBJECT_OT_generateRockWallPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateRockWallPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

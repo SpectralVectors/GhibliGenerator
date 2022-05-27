@@ -1,7 +1,7 @@
 # Gradient Flash Plane
 import bpy
 
-#from .Drivers.ActionPlanesDrivers import *
+from .Drivers.GradientFlashDrivers import *
 
 def generateGradientFlashPlane():
 
@@ -67,6 +67,6 @@ class OBJECT_OT_generateGradientFlashPlane(bpy.types.Operator):
     def execute(self, context):
 
         generateGradientFlashPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}

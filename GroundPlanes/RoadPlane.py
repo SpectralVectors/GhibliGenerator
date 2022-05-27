@@ -1,13 +1,13 @@
 # Road Plane Generator
 import bpy
 
-#from .Drivers.roadplaneDrivers import *
+from .Drivers.RoadPlaneDrivers import *
 
 def generateRoadPlane():
 
     bpy.ops.mesh.primitive_plane_add(size=2, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
     roadplane = bpy.context.object
-    roadplane.name = 'Sand'
+    roadplane.name = 'Road'
     bpy.ops.object.shade_smooth()
 
     bpy.ops.object.modifier_add(type='ARRAY')
@@ -172,6 +172,6 @@ class OBJECT_OT_generateRoadRlane(bpy.types.Operator):
     def execute(self, context):
 
         generateRoadPlane()
-        #assignDrivers()
+        assignDrivers()
 
         return {'FINISHED'}
