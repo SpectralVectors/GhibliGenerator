@@ -98,6 +98,18 @@ The assets are divided into categories for easier navigation:
 
 ### Sand
 ![SandPlane](/screenshots/SandPlane.png)
+### Sand Properties
+**Color1** - The light color
+
+**Color2** - The shadow color
+
+**DisplaceStrength** - The intensity of the displacement, how _tall_ do you want the hills
+
+**GrainScale** - How large are the grains of sand
+
+**GrainsDensity** - How many grains of sand do you want
+
+**GrainsMix** - Mix between grains and plain sand
 
 [(back to top)](#table-of-contents)
 
@@ -105,6 +117,28 @@ The assets are divided into categories for easier navigation:
 
 ### Ice
 ![IcePlane](/screenshots/IcePlane.png)
+### Ice Properties
+**Color1**
+
+**Color2**
+
+**Color3**
+
+**ColorTint**
+
+**CracksMix1**
+
+**CracksMix2**
+
+**DisplaceStrength** - The intensity of the displacement, how _tall_ do you want the hills
+
+**ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
+
+**LinesMix**
+
+**Noise1Scale**
+
+**Noise2Scale**
 
 [(back to top)](#table-of-contents)
 
@@ -112,6 +146,24 @@ The assets are divided into categories for easier navigation:
 
 ### Stone Path
 ![StonePath](/screenshots/StonePath.png)
+### Stone Path Properties
+**Color1**
+
+**Color2**
+
+**Color3**
+
+**DistortionScale**
+
+**ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
+
+**LinesMix**
+
+**NoiseScale**
+
+**StoneRandom**
+
+**StoneScale**
 
 [(back to top)](#table-of-contents)
 
@@ -119,6 +171,22 @@ The assets are divided into categories for easier navigation:
 
 ### Rock Wall
 ![RockWallPlane](/screenshots/RockWallPlane.png)
+### Rock Wall Properties
+**Color1**
+
+**Color2**
+
+**Color3**
+
+**DistortionScale**
+
+**ExtendX/Y** - Extends the object procedurally to avoid tiling or repetition
+
+**NoiseScale**
+
+**RockScale**
+
+**ShadowMix**
 
 [(back to top)](#table-of-contents)
 
@@ -126,6 +194,28 @@ The assets are divided into categories for easier navigation:
 
 ### Road
 ![RoadPlane](/screenshots/RoadPlane.png)
+### Road Properties
+**CenterLineColor**
+
+**CracksMix**
+
+**CracksPuddles**
+
+**DisplaceStrength** - The intensity of the displacement, how _tall_ do you want the bumps
+
+**Extend**
+
+**LineSpacing**
+
+**OuterLineColor**
+
+**RoadBaseColor**
+
+**RoadMotion**
+
+**RoadTexture**
+
+**RoadTextureScale**
 
 [(back to top)](#table-of-contents)
 
@@ -265,6 +355,12 @@ The assets are divided into categories for easier navigation:
 
 ### Color Flash
 ![ColorFlash](/screenshots/ColorFlash.png)
+### Color Flash Properties
+**Color**
+
+**EmissionStrength**
+
+**Transparency
 
 [(back to top)](#table-of-contents)
 
@@ -272,6 +368,16 @@ The assets are divided into categories for easier navigation:
 
 ### Gradient Flash
 ![GradientFlash](/screenshots/GradientFlash.png)
+### Gradient Flash Properties
+**Color1**
+
+**Color2**
+
+**EmissionStrength**
+
+**GradientHeight**
+
+**Transparency**
 
 [(back to top)](#table-of-contents)
 
@@ -279,6 +385,22 @@ The assets are divided into categories for easier navigation:
 
 ### Circular Flash
 ![CircularFlash](/screenshots/CircularFlash.png)
+### Circular Flash Properties
+**CircleLocationX**
+
+**CircleLocationY**
+
+**CircleScaleX**
+
+**CircleScaleY**
+
+**Color1**
+
+**Color2**
+
+**EmissionStrength**
+
+**Transparency**
 
 [(back to top)](#table-of-contents)
 
