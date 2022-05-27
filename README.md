@@ -360,7 +360,7 @@ The assets are divided into categories for easier navigation:
 
 **EmissionStrength**
 
-**Transparency
+**Transparency**
 
 [(back to top)](#table-of-contents)
 
