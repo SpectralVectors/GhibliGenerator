@@ -68,7 +68,7 @@ class GhibliGeneratorPanel(bpy.types.Panel):
             column = box.column()
             try:
                 column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='HAIR')
-            except:
+            except TypeError:
                 column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='STRANDS')
             column.operator(OBJECT_OT_generateWaterPlanes.bl_idname, text='Water', icon='MOD_OCEAN')
             column.operator(OBJECT_OT_generateSandPlane.bl_idname, text='Sand', icon='RNDCURVE')
