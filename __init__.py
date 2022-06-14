@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Ghibli Generator",
     "author": "Spectral Vectors",
-    "version": (0, 8, 4),
+    "version": (0, 8, 5),
     "blender": (2, 80, 0),
     "location": "View 3D > Properties Panel",
     "description": "Procedural Anime Assets",
@@ -66,7 +66,10 @@ class GhibliGeneratorPanel(bpy.types.Panel):
         row.label(text="Ground Planes")                
         if context.scene.groundplanes_panel_open:
             column = box.column()
-            column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='HAIR')
+            try:
+                column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='HAIR')
+            except:
+                column.operator(OBJECT_OT_generateGrassPlane.bl_idname, text='Grass', icon='STRANDS')
             column.operator(OBJECT_OT_generateWaterPlanes.bl_idname, text='Water', icon='MOD_OCEAN')
             column.operator(OBJECT_OT_generateSandPlane.bl_idname, text='Sand', icon='RNDCURVE')
             column.operator(OBJECT_OT_generateIcePlane.bl_idname, text='Ice', icon='FREEZE')
